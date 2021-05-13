@@ -59,7 +59,8 @@
     function calculate() {
         const monthlyCustomers = parseInt(document.querySelector('.monthly-customers-input').value);
         const monthlySubscriptionPrice = parseInt(document.querySelector('.monthly-subscription-price-input').value);
-        const months = parseInt(document.querySelector('.months-input').value);
+        // const months = parseInt(document.querySelector('.months-input').value);
+        const months = 12;
         const results = document.querySelector('.annual-turnover-results-text');
         let monthlyRevenue = [];
         let mrr = monthlyCustomers * monthlySubscriptionPrice;
@@ -78,7 +79,7 @@
 
         results.innerHTML = `
             <h3 class="text-2xl mb-5">Results</h3>
-            <p>If you acquire <strong class="text-2xl text-green-400">${monthlyCustomers}</strong> customers per month paying <strong class="text-2xl text-green-400">£${monthlySubscriptionPrice}</strong> each - your revenue over ${months} months will be <strong class="text-2xl text-green-400">£${thousands_separators(annualTurnover.toFixed(2))}</strong></p>
+            <p>If you acquire <strong class="text-2xl text-green-400">${monthlyCustomers}</strong> customers per month paying <strong class="text-2xl text-green-400">£${monthlySubscriptionPrice}</strong> each - your revenue in the first ${months} months will be <strong class="text-2xl text-green-400">£${thousands_separators(annualTurnover.toFixed(2))}</strong></p>
             <div class="flex flex-col md:flex-row">
                 <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:mr-2 shadow flex-grow">
                     <div class="text-lg"><strong>MRR</strong> <br/><span class="text-xs">(Monthly Recurring Revenue)</span> <br/><span class="font-bold text-sm">at month ${months}</span></div>
@@ -130,6 +131,6 @@
 
     copyCat('.monthly-customers-input', '.monthly-customers-input-slider-range', 'customers');
     copyCat('.monthly-subscription-price-input', '.monthly-subscription-price-input-slider-range', 'price');
-    copyCat('.months-input', '.months-input-slider-range', 'months');
+    // copyCat('.months-input', '.months-input-slider-range', 'months');
     calculate();
 })();
