@@ -1046,6 +1046,10 @@ input[type=range]::-moz-range-thumb {
     border-width: 2px;
   }
 
+  .md\:inline {
+    display: inline;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -1074,8 +1078,8 @@ input[type=range]::-moz-range-thumb {
     margin-right: 1.25rem;
   }
 
-  .md\:ml-5 {
-    margin-left: 1.25rem;
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .md\:p-10 {
