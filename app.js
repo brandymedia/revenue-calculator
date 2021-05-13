@@ -80,13 +80,15 @@
             <h3 class="text-2xl mb-5">Results</h3>
             <p>If you acquire <strong class="text-2xl">${monthlyCustomers}</strong> customers per month paying <strong class="text-2xl">£${monthlySubscriptionPrice}</strong> each - your revenue over ${months} months will be <strong class="text-2xl">£${thousands_separators(annualTurnover.toFixed(2))}</strong></p>
             <div class="flex flex-col md:flex-row">
-                <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:mr-2 shadow">
-                    <div class="text-lg"><strong>MRR</strong> <br/><span class="text-sm">(Monthly Recurring Revenue)</span></div>
-                    <div class="text-lg font-bold">£${thousands_separators(mrr.toFixed(2))}</div>
+                <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:mr-2 shadow flex-grow">
+                    <div class="text-lg"><strong>MRR</strong> <br/><span class="text-xs">(Monthly Recurring Revenue)</span> <br/><span class="font-bold text-sm">at month ${months}</span></div>
+                    <div class="text-lg font-bold pb-3 mb-3 border-b-2 border-gray-900">£${thousands_separators((mrr.toFixed(2) * months))}</div>
+                    <div class="text-sm">+ £${thousands_separators(mrr)} <span class="text-xs">monthly</span></div>                   
                 </div>
-                <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:ml-2 shadow">
-                    <div class="text-lg"><strong>ARR</strong> <br/><span class="text-sm">(Annual Recurring Revenue)</span></div>
-                    <div class="text-lg font-bold">£${thousands_separators(arr.toFixed(2))}</div>
+                <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:ml-2 shadow flex-grow">
+                    <div class="text-lg"><strong>ARR</strong> <br/><span class="text-xs">(Annual Recurring Revenue)</span> <br/><span class="font-bold text-sm">at month ${months}</span></div>
+                    <div class="text-lg font-bold pb-3 mb-3 border-b-2 border-gray-900">£${thousands_separators((arr.toFixed(2) * months))}</div>
+                    <div class="text-sm">+ £${thousands_separators(arr)} <span class="text-xs">yearly</span></div>
                 </div>
             </div>
             <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 shadow">
