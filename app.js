@@ -77,7 +77,7 @@
 
 
         results.innerHTML = `
-            <h2 class="text-2xl mb-5">Results</h2>
+            <h3 class="text-2xl mb-5">Results</h3>
             <p>If you acquire <strong class="text-2xl">${monthlyCustomers}</strong> customers paying <strong class="text-2xl">£${monthlySubscriptionPrice}</strong> per month - your revenue over ${months} months will be <strong class="text-2xl">£${thousands_separators(annualTurnover.toFixed(2))}</strong></p>
             <div class="flex flex-col md:flex-row">
                 <div class="annual-turnover-result-row mt-10 border-2 border-gray-900 p-2 md:mr-2 shadow">
